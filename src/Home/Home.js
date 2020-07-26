@@ -14,7 +14,28 @@ class Home extends React.Component {
 			recipes: [],
 		};
 		this.viewElement = React.createRef();
+		this.navElement = React.createRef();
 	}
+	showNav = () => {
+		const nav = document.querySelector(".nav");
+		nav.classList.toggle("nav-active");
+
+		//ANIMATE LINKS
+		const navLinks = document.querySelectorAll(".navLinks");
+		navLinks.forEach((link, index) => {
+			if (link.style.animation) {
+				link.style.animation = "";
+			} else {
+				link.style.animation = `navlinksfade 0.5s ease forwards ${
+					index / 7 + 0.2
+				}s`;
+			}
+		});
+
+		//CHANGE BURGER TO X
+		const burger = document.querySelector(".burger");
+		burger.classList.toggle("fa-times");
+	};
 	updateSearchField = (e) => {
 		this.setState({
 			searchfield: e.target.value,
@@ -42,8 +63,8 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div className="body">
-				<Header className="head" />
-				<Navigation className="nav" />
+				<Header showNav={this.showNav} className="head" />
+				<Navigation className="nav" ref={this.navElement} />
 				<Search
 					className="search"
 					updateSearchField={this.updateSearchField}

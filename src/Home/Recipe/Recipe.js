@@ -18,7 +18,9 @@ const Recipe = ({ image, name, ingridients }) => {
 				<Scroll>
 					<ol>
 						{ingridients.map((ingredient) => (
-							<li key={ingredient.text}>{ingredient.text}</li>
+							<li
+								key={ingredient.text}
+							>{`${ingredient.text}. `}</li>
 						))}
 					</ol>
 				</Scroll>

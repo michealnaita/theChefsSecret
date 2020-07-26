@@ -19,3 +19,12 @@
 	max-width: 108.13px;
 	width: 30%;
 }
+.head i {
+	color: #464646;
+	font-size: 25px;
+	display: none;
+	cursor: pointer;
+	transition: all 0.5 ease;
+}
+@media screen and (max-width: 900px) {
+}

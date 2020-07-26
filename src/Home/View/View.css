@@ -13,7 +13,17 @@
 	display: grid;
 	align-items: center;
 	justify-content: space-around;
-	grid-template-columns: repeat(auto-fit, minmax(500px, 400px));
+	grid-template-columns: repeat(auto-fit, minmax(550px, 400px));
 	/*grid-column-gap: 5px;*/
 	grid-row-gap: 15px;
+}
+@media screen and (max-width: 768px) {
+	.recipes {
+		grid-template-columns: repeat(auto-fit, minmax(550px, 400px));
+	}
+}
+@media screen and (max-width: 500px) {
+	.recipes {
+		grid-template-columns: repeat(auto-fit, minmax(365px, 400px));
+	}
 }
