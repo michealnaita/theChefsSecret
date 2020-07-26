@@ -1,0 +1,36 @@
+.nav {
+	background: #464646;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+.dp {
+	width: 15vh;
+	height: 15vh;
+	border-radius: 100px;
+	background: white;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.user {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	/*justify-content: center;*/
+}
+.signout {
+	text-decoration: underline;
+}
+.nav p {
+	color: #c8c9c1;
+	font-size: 20px;
+}
+.active {
+	opacity: 50%;
+}
+.username {
+	padding: 10px 0;
+}
